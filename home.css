@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'Road-rage';
+    src: url(font/thedeadsaloon-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Road-rage';
+}
+
+header img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+}
+
+.main-nav > ul > li {
+    position: relative;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.main-nav a:hover {
+    background-color: #333;
+}
+
+.hero-marshall {
+    font-family: 'Road-rage';
+    min-height: 80vh;       /* Mantiene el impacto visual mínimo */
+    background-image: url('img/fondohomerock.webp'); 
+    background-size: 100% 100%; /* La imagen se estira proporcionalmente sin deformarse */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.2) 100%);
+    min-height: 80vh; 
+    display: flex;
+    align-items: center;
+    padding: 40px 5%; 
+}
+
+.hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-family: 'Road-rage';
+    font-size: 5rem;   
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content h1 span {
+    font-size: 3.5rem; 
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    max-width: 500px;
+}
+
+.info-blocks {
+    font-family: 'Road-rage';
+    background-color: #000; 
+    padding: 100px 0;
+    color: #fff;
+}
+
+.info-row {
+    font-family: 'Road-rage';
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto 150px auto; 
+    gap: 50px;
+}
+
+.info-row.reverse {
+    font-family: 'Road-rage';
+    color: #fff;
+    flex-direction: row-reverse;
+}
+
+.info-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.info-text h2 {
+    font-family: 'Road-rage';
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc; 
+    margin-bottom: 30px;
+}
+
+.info-image {
+    flex: 1;
+    text-align: center;
+}
+
+.info-image img {
+    max-width: 80%;
+    transition: 0.5s;
+    width: 375px;
+    height: 375px;
+}
+
+.info-image img:hover {
+    transform: scale(1.05); 
+}
+
+.btn-minimal {
+    padding: 12px 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-minimal:hover {
+    background: #fff;
+    color: #000;
+}
+
+footer{
+    color: white;
+    background-color: #111;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+
+
+@media (max-width: 500px) {
+    .info-image img {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media (max-width: 500px){
+    .main-nav a {
+        font-size: 0.6rem;
+        padding: 10px 20px;
+        margin: auto;
+        position: relative;
+        right: 20px;
+    }
+}
