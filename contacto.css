@@ -50,12 +50,7 @@
 }
 
 /* Inputs y selects */
-.contacto input[type="text"],
-.contacto input[type="email"],
-.contacto input[type="tel"],
-.contacto input[type="date"],
-.contacto select,
-.contacto textarea {
+.contacto input[type="text"], .contacto input[type="email"], .contacto input[type="tel"], .contacto input[type="date"], .contacto select, .contacto textarea {
     width: 100%;
     padding: 10px;
     margin-top: 6px;
@@ -67,17 +62,14 @@
 }
 
 /* Efecto focus */
-.contacto input:focus,
-.contacto select:focus,
-.contacto textarea:focus {
+.contacto input:focus, .contacto select:focus, .contacto textarea:focus {
     border-color: #0077cc;
     outline: none;
     box-shadow: 0 0 4px rgba(0, 119, 204, 0.4);
 }
 
 /* Radio y checkbox */
-.contacto input[type="radio"],
-.contacto input[type="checkbox"] {
+.contacto input[type="radio"], .contacto input[type="checkbox"] {
     margin-right: 8px;
 }
 
@@ -106,7 +98,7 @@
 }
 
 /* Tablets */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .contacto {
         padding: 15px;
     }
@@ -117,7 +109,7 @@
 }
 
 /* Móviles */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .contacto {
         padding: 10px;
     }
