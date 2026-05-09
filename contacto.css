@@ -169,29 +169,6 @@ header img {
     background: #005fa3;
 }
 
-/* Tablets */
-@media (max-width: 500px) {
-    .contacto {
-        padding: 15px;
-    }
-
-    .contacto fieldset {
-        padding: 15px;
-    }
-}
-
-/* Móviles */
-@media (max-width: 500px) {
-    .contacto {
-        padding: 10px;
-    }
-
-    .contacto button {
-        font-size: 16px;
-        padding: 10px;
-    }
-}
-
 .simple-footer {
     background-color: #000;
     color: #fff;
@@ -267,19 +244,23 @@ header img {
     margin-bottom: 20px;
 }
 
-@media (max-width: 500px) {
-    .info-image img {
-        width: 125px;
-        height: 125px;
+@media (max-width: 600px) {
+    .footer-wrap {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
     }
 }
 
-@media (max-width: 500px) {
-    .main-nav a {
-        font-size: 0.6rem;
-        padding: 10px 20px;
-        margin: auto;
-        position: relative;
-        right: 20px;
+/* Tablets Vertical (máx 768px) */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column; /* En tablets y móviles, el aside pasa abajo */
+    }
+    
+    .contenido-derecho {
+        width: 100%;
+        min-width: auto;
     }
 }
