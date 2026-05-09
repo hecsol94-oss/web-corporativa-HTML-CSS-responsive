@@ -3,6 +3,37 @@
     src: url(font/thedeadsaloon-Regular.ttf);
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Road-rage';
+}
+
+header img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
 /* Contenedor general */
 .contacto {
     max-width: 900px;
