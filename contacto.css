@@ -58,6 +58,23 @@ header img {
     background-color: #333;
 }
 
+.submenu {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 200px;
+    z-index: 100;
+    flex-direction: column;
+}
+
+.dropdown:hover .submenu {
+    visibility: inherit;
+    display: flex;
+}
+
 /* Contenedor general */
 .contacto {
     max-width: 900px;
