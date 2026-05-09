@@ -77,3 +77,20 @@
     color: #444;
     margin-bottom: 20px;
 }
+
+@media (max-width: 500px) {
+    .info-image img {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-nav a {
+        font-size: 0.6rem;
+        padding: 10px 20px;
+        margin: auto;
+        position: relative;
+        right: 20px;
+    }
+}
