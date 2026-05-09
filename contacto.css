@@ -34,6 +34,30 @@ header img {
     margin-bottom: 20px;
 }
 
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+}
+
+.main-nav > ul > li {
+    position: relative;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.main-nav a:hover {
+    background-color: #333;
+}
+
 /* Contenedor general */
 .contacto {
     max-width: 900px;
