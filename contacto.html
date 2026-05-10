@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROCK & DAW - Contacto</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="nosotros.css">
     <link rel="icon" href="icon/icons8-calavera-50.png">
 </head>
@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="servicios.html">Areas de Actuacion</a>
+                    <a href="servicios.html">Áreas de Actuación</a>
                     <ul class="submenu">
                         <li><a href="#recomendados">Recomendados</a></li>
                         <li><a href="#punk">Vinilos Punk</a></li>
@@ -24,11 +24,81 @@
                         <li><a href="#metal">Vinilos Metal</a></li>
                     </ul>
                 </li>
-                <li><a href="nosotros.html">Quienes Somos</a></li>
+                <li><a href="nosotros.html">Quiénes Somos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
+
+    <section class="contacto">
+    <h1>Contacto</h1>
+    <p>Complete el siguiente formulario y nos pondremos en contacto con usted lo antes posible.</p>
+
+    <form action="#" method="post">
+
+        <!-- Datos personales -->
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+            
+            <br>
+            <label for="apellidos">Apellidos *</label>
+            <input type="text" id="apellidos" name="apellidos" required placeholder="Escribe tus apellidos">
+            
+            <br>
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+
+            <br>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="Tlfno">
+
+            <br>
+            <label for="fecha">Fecha de contacto</label>
+            <input type="date" id="fecha" name="fecha">
+        </fieldset>
+
+        <!-- Motivo del contacto -->
+        <fieldset>
+            <legend>Motivo de la consulta</legend>
+
+            <label for="asunto">Asunto *</label>
+            <select id="asunto" name="asunto" required>
+                <option value="">Seleccione una opción</option>
+                <option value="info">Solicitud de información</option>
+                <option value="presupuesto">Pedir presupuesto</option>
+                <option value="soporte">Soporte técnico</option>
+                <option value="otros">Otros</option>
+            </select>
+
+            <p>Preferencia de contacto:</p>
+            <label for="mensaje">Mensaje *</label>
+            <br>
+            <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe tu mensaje"></textarea>
+
+            <br>
+            <label><input type="radio" name="preferencia" value="email"> Email</label>
+            <label><input type="radio" name="preferencia" value="telefono"> Teléfono</label>
+
+        </fieldset>
+
+        <!-- Aceptación -->
+        <fieldset>
+            <legend>Confirmación</legend>
+
+            <label>
+                <input type="checkbox" required>
+                Acepto la política de privacidad *
+            </label>
+        </fieldset>
+
+        <button type="submit">Enviar formulario</button>
+        <button type="reset">Borrar formulario</button>
+    </form>
+    </section>
+
     <footer class="simple-footer">
     <div class="footer-wrap">
         <!-- Bloque Redes Sociales -->
@@ -43,7 +113,7 @@
 
         <!-- Bloque Métodos de Pago -->
         <div class="footer-block">
-            <h4>METODOS DE PAGO:</h4>
+            <h4>MÉTODOS DE PAGO:</h4>
             <div class="payment-icons-row">
                 <div class="pay-card"><img src="icon/icons8-visa-24.png" alt=""></div>
                 <div class="pay-card"><img src="icon/icons8-parte-trasera-de-tarjeta-bancaria-24.png" alt=""></div>
