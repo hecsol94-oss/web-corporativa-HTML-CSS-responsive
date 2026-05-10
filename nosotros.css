@@ -3,7 +3,6 @@
     src: url(font/thedeadsaloon-Regular.ttf);
 }
 
-/* --- LIMPIEZA Y CLEARFIX (Chuletario 1) --- */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +22,6 @@ body {
     width: 100%;
 }
 
-/* --- HEADER --- */
 header {
     background-color: #000;
     color: #fff;
@@ -39,7 +37,6 @@ header {
     margin-bottom: 20px;
 }
 
-/* --- NAVEGACIÓN (Sustitución de Flex por Inline-block) --- */
 .main-nav {
     background-color: #111;
     text-align: center;
@@ -51,7 +48,7 @@ header {
 }
 
 .main-nav li {
-    display: inline-block; /* En lugar de flex */
+    display: inline-block; 
 }
 
 .main-nav a {
@@ -68,7 +65,6 @@ header {
     background-color: #333;
 }
 
-/* --- SECCIÓN QUIÉNES SOMOS (Sustitución de Flex por Floats) --- */
 .quienes-somos {
     max-width: 1200px;
     margin: 60px auto;
@@ -78,7 +74,6 @@ header {
 
 .titulo-marshall {
     font-family: 'Road-rage';
-    /* Eliminado clamp() por no estar en chuletario, usamos tamaño fijo */
     font-size: 5rem; 
     text-align: center;
     margin-bottom: 60px;
@@ -93,22 +88,21 @@ header {
 
 .qs-texto {
     width: 55%;
-    float: left; /* En lugar de flex: 1 */
+    float: left; 
     padding-right: 40px;
 }
 
 .qs-imagen {
     width: 45%;
-    float: left; /* En lugar de flex: 1 */
+    float: left; 
     text-align: center;
 }
 
-/* --- ESTILOS DE TEXTO E IMAGEN --- */
 .qs-texto .resaltado {
     font-size: 1.3rem;
     color: #333;
     font-style: italic;
-    border-left: 3px solid #000; /* Cambiado a negro para visibilidad en fondo blanco */
+    border-left: 3px solid #000; 
     padding-left: 20px;
     margin-bottom: 30px;
     line-height: 1.4;
@@ -128,7 +122,6 @@ header {
     height: auto; 
     border-radius: 4px;
     border: 1px solid #333;
-    /* Transiciones y Transformaciones (Chuletario 2) */
     transition: transform 0.5s ease;
 }
 
@@ -136,14 +129,13 @@ header {
     transform: scale(1.02);
 }
 
-/* --- FOOTER (Basado en Floats) --- */
 .simple-footer {
     background-color: #111;
     color: #fff;
     padding: 40px 0;
     font-family: 'Road-rage';
     margin-top: 80px;
-    clear: both; /* Limpia los floats superiores */
+    clear: both; 
 }
 
 .footer-wrap {
@@ -153,7 +145,7 @@ header {
 
 .footer-block {
     width: 50%;
-    float: left; /* En lugar de flex */
+    float: left; 
     text-align: center;
 }
 
@@ -196,7 +188,6 @@ header {
     clear: both;
 }
 
-/* --- RESPONSIVO (Chuletario 2: @media screen) --- */
 @media screen and (max-width: 900px) {
     .qs-texto, .qs-imagen, .footer-block {
         width: 100%;
