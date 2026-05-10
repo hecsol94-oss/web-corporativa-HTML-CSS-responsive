@@ -3,127 +3,222 @@
     src: url(font/thedeadsaloon-Regular.ttf);
 }
 
-.quienes-somos {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
+/* --- LIMPIEZA Y CLEARFIX (Chuletario 1) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.quienes-somos h1 {
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    background-color: #fff; 
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    margin-bottom: 30px;
-    color: #333;
+    font-family: 'Road-rage';
+    border-bottom: 1px solid #222;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+/* --- NAVEGACIÓN (Sustitución de Flex por Inline-block) --- */
+.main-nav {
+    background-color: #111;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav li {
+    display: inline-block; /* En lugar de flex */
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: #333;
+}
+
+/* --- SECCIÓN QUIÉNES SOMOS (Sustitución de Flex por Floats) --- */
+.quienes-somos {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 5%;
+    min-height: 70vh;
+}
+
+.titulo-marshall {
+    font-family: 'Road-rage';
+    /* Eliminado clamp() por no estar en chuletario, usamos tamaño fijo */
+    font-size: 5rem; 
+    text-align: center;
+    margin-bottom: 60px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .qs-contenido {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    width: 100%;
 }
 
 .qs-texto {
-    flex: 1;
-    font-size: 17px;
-    line-height: 1.6;
-    color: #444;
+    width: 55%;
+    float: left; /* En lugar de flex: 1 */
+    padding-right: 40px;
+}
+
+.qs-imagen {
+    width: 45%;
+    float: left; /* En lugar de flex: 1 */
+    text-align: center;
+}
+
+/* --- ESTILOS DE TEXTO E IMAGEN --- */
+.qs-texto .resaltado {
+    font-size: 1.3rem;
+    color: #333;
+    font-style: italic;
+    border-left: 3px solid #000; /* Cambiado a negro para visibilidad en fondo blanco */
+    padding-left: 20px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.qs-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000; 
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
 .qs-imagen img {
     width: 100%;
-    max-width: 420px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    max-width: 500px;
+    height: auto; 
+    border-radius: 4px;
+    border: 1px solid #333;
+    /* Transiciones y Transformaciones (Chuletario 2) */
+    transition: transform 0.5s ease;
 }
 
+.qs-imagen img:hover {
+    transform: scale(1.02);
+}
+
+/* --- FOOTER (Basado en Floats) --- */
 .simple-footer {
-    background-color: #000;
+    background-color: #111;
     color: #fff;
-    padding: 40px 0 20px 0;
+    padding: 40px 0;
     font-family: 'Road-rage';
+    margin-top: 80px;
+    clear: both; /* Limpia los floats superiores */
 }
 
 .footer-wrap {
     max-width: 1000px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+}
+
+.footer-block {
+    width: 50%;
+    float: left; /* En lugar de flex */
+    text-align: center;
 }
 
 .footer-block h4 {
     font-size: 1.4rem;
-    letter-spacing: 1px;
     margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
 }
 
-.social-icons-row {
-    display: flex;
-    gap: 15px;
+.social-icons-row, .payment-icons-row {
+    margin-top: 15px;
 }
 
 .icon-circle {
+    display: inline-block;
     background-color: #fff;
-    color: #000;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px; 
+    margin: 0 5px;
 }
 
-.payment-icons-row {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+.icon-circle img {
+    margin-top: 8px; 
 }
 
-.pay-card {
-    background-color: #fff;
-    color: #000;
-    padding: 5px 12px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-}
-
-.pay-card.paypal {
-    font-style: italic;
-    font-size: 1.2rem;
-    background: transparent; 
-    color: #fff; 
+.pay-card{
+    background-color: white;
+    display: inline-block;
+    margin: auto 10px;
+    padding: 0 10px;
+    border-radius: 5px;
 }
 
 .copy-text {
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-top: 40px;
-    font-size: 20px;
-    color: #444;
-    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    color: #666;
+    font-size: 0.9rem;
+    clear: both;
 }
 
-@media (max-width: 500px) {
-    .info-image img {
-        width: 125px;
-        height: 125px;
+/* --- RESPONSIVO (Chuletario 2: @media screen) --- */
+@media screen and (max-width: 900px) {
+    .qs-texto, .qs-imagen, .footer-block {
+        width: 100%;
+        float: none;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .titulo-marshall {
+        font-size: 3rem;
+    }
+
+    .qs-texto .resaltado {
+        border-left: none;
+        border-top: 2px solid #000;
+        padding-top: 20px;
     }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 640px) {
     .main-nav a {
-        font-size: 0.6rem;
-        padding: 10px 20px;
-        margin: auto;
-        position: relative;
-        right: 20px;
+        padding: 10px 5px;
+        font-size: 0.7rem;
     }
 }

@@ -64,13 +64,16 @@ header {
 }
 
 .hero-marshall {
-    font-family: 'Road-rage';
     min-height: 80vh; 
     background-image: url('img/fondohomerock.webp'); 
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; 
+}
+
+.hero-marshall h1{
+    font-family: 'Road-rage';
 }
 
 .hero-overlay {
@@ -95,10 +98,13 @@ header {
 }
 
 .info-blocks {
-    font-family: 'Road-rage';
     background-color: #000; 
     padding: 100px 0;
     color: #fff;
+}
+
+.info-blocks h2{
+    font-family: 'Road-rage';
 }
 
 .info-row {

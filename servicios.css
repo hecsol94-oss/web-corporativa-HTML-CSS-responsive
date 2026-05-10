@@ -91,13 +91,13 @@ header img {
 main {
     max-width: 1400px;
     margin: 0 auto;
-    font-family: 'Road-rage';
 }
 
 .contenido-izquierdo {
     width: 70%;
     float: left; 
     padding: 0 20px;
+    font-family: 'Road-rage';
 }
 
 .contenido-derecho {
@@ -154,6 +154,7 @@ main {
 
 .contenido-derecho h3{
     margin-bottom: 7px;
+    font-family: 'Road-rage';
 }
 
 .contenido-derecho hr{
