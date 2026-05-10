@@ -3,6 +3,172 @@
     src: url(font/thedeadsaloon-Regular.ttf);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Road-rage';
+}
+
+header img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+}
+
+.main-nav > ul > li {
+    position: relative;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.main-nav a:hover {
+    background-color: #333;
+}
+
+.submenu {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 200px;
+    z-index: 100;
+    flex-direction: column;
+}
+
+.dropdown:hover .submenu {
+    visibility: inherit;
+    display: flex;
+}
+
+/* Contenedor general */
+.contacto {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Título */
+.contacto h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Texto introductorio */
+.contacto p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Fieldsets */
+.contacto fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+
+.contacto legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Etiquetas */
+.contacto label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Inputs y selects */
+.contacto input[type="text"], .contacto input[type="email"], .contacto input[type="tel"], .contacto input[type="date"], .contacto select, .contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+/* Efecto focus */
+.contacto input:focus, .contacto select:focus, .contacto textarea:focus {
+    border-color: #0077cc;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 119, 204, 0.4);
+}
+
+/* Radio y checkbox */
+.contacto input[type="radio"], .contacto input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Textarea */
+.contacto textarea {
+    resize: vertical;
+}
+
+/* Botón */
+.contacto button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.contacto button:hover {
+    background: #005fa3;
+}
+
 .simple-footer {
     background-color: #000;
     color: #fff;
@@ -78,19 +244,23 @@
     margin-bottom: 20px;
 }
 
-@media (max-width: 500px) {
-    .info-image img {
-        width: 125px;
-        height: 125px;
+@media (max-width: 600px) {
+    .footer-wrap {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
     }
 }
 
-@media (max-width: 500px) {
-    .main-nav a {
-        font-size: 0.6rem;
-        padding: 10px 20px;
-        margin: auto;
-        position: relative;
-        right: 20px;
+/* Tablets Vertical (máx 768px) */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column; /* En tablets y móviles, el aside pasa abajo */
+    }
+    
+    .contenido-derecho {
+        width: 100%;
+        min-width: auto;
     }
 }
